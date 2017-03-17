@@ -15,7 +15,7 @@
     <body>
         <h1>Listagem de Registros!</h1>
 
-        <table border="0">
+        <table>
             <thead>
                 <tr>
                     <th>ID</th>
