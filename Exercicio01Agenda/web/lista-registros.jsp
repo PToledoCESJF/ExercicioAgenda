@@ -4,6 +4,7 @@
     Author     : Paulo
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,24 +14,28 @@
     </head>
     <body>
         <h1>Listagem de Registros!</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Sobrenome</th>
-                    <th>Telefone</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>id</td>
-                    <td>nome</td>
-                    <td>sobrenome</td>
-                    <td>telefone</td>
-                </tr>
-            </tbody>
-        </table>
+        <form action="ListaRegistrosServlet">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>
+                        <th>Telefone</th>
+                    </tr>
+                </thead>
+                <c:forEach var="pessoa" items="${pessoas}">
+                    <tbody>
+                        <tr>
+                            <td>${pessoa.id}</td>
+                            <td>${pessoa.nome}</td>
+                            <td>${pessoa.sobrenome}</td>
+                            <td>${pessoa.telefone}</td>
+                        </tr>
+                    </tbody>
+                </c:forEach>
+            </table>
+        </form>
 
     </body>
 </html>
