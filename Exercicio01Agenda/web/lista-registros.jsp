@@ -14,28 +14,26 @@
     </head>
     <body>
         <h1>Listagem de Registros!</h1>
-        <form action="ListaRegistrosServlet">
-            <table>
-                <thead>
+        <a href="novo-registro.jsp">Novo...</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <c:forEach var="pessoa" items="${pessoas}">
+                <tbody>
                     <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Sobrenome</th>
-                        <th>Telefone</th>
+                        <td>${pessoa.id}</td>
+                        <td>${pessoa.nome}</td>
+                        <td>${pessoa.sobrenome}</td>
+                        <td>${pessoa.telefone}</td>
                     </tr>
-                </thead>
-                <c:forEach var="pessoa" items="${pessoas}">
-                    <tbody>
-                        <tr>
-                            <td>${pessoa.id}</td>
-                            <td>${pessoa.nome}</td>
-                            <td>${pessoa.sobrenome}</td>
-                            <td>${pessoa.telefone}</td>
-                        </tr>
-                    </tbody>
-                </c:forEach>
-            </table>
-        </form>
-
+                </tbody>
+            </c:forEach>
+        </table>
     </body>
 </html>
