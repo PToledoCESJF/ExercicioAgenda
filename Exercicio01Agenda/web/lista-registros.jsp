@@ -27,10 +27,11 @@
             <c:forEach var="pessoa" items="${pessoas}">
                 <tbody>
                     <tr>
-                        <td>${pessoa.id}</td>
+                        <td><a href="edita-registro.jsp?id=${pessoa.id}">${pessoa.id}</a></td>
                         <td>${pessoa.nome}</td>
                         <td>${pessoa.sobrenome}</td>
                         <td>${pessoa.telefone}</td>
+                        
                     </tr>
                 </tbody>
             </c:forEach>
