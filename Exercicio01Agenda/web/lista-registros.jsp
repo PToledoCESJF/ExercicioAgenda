@@ -31,7 +31,7 @@
                         <td>${pessoa.nome}</td>
                         <td>${pessoa.sobrenome}</td>
                         <td>${pessoa.telefone}</td>
-                        
+                        <td><a href="excluir.html?id=${pessoa.id}"><h3>X</h3></a></td>
                     </tr>
                 </tbody>
             </c:forEach>

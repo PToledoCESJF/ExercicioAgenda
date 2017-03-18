@@ -12,6 +12,10 @@
         <servlet-name>EditaRegistroServlet</servlet-name>
         <servlet-class>br.cesjf.lppo.EditaRegistroServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ExcluiRegistroServlet</servlet-name>
+        <servlet-class>br.cesjf.lppo.ExcluiRegistroServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ListaRegistrosServlet</servlet-name>
         <url-pattern>/lista.html</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>EditaRegistroServlet</servlet-name>
         <url-pattern>/edita.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExcluiRegistroServlet</servlet-name>
+        <url-pattern>/exclui.html</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
